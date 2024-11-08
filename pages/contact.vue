@@ -1,3 +1,3 @@
 <template>
-    <h3>reuben</h3>
+    <h1>contact us</h1>
 </template>
