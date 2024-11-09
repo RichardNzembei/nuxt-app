@@ -1,8 +1,14 @@
 <script setup>
-
+const message=()=>{
+  alert('hello')
+}
 </script>
 <template>
   <div>
-    <UButton>Button</UButton>
+    <UButton 
+    icon="i-heroicons-pencil-square"
+    color="red"
+    @click="message"
+    >Actions</UButton>
   </div>
 </template>

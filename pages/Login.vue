@@ -3,12 +3,10 @@
 </script>
 <template>
   <div class="min-h-screen bg-gradient-to-r from-white to-red-300 ">
-    <div class="flex justify-between">
-      <NuxtLink to="/">
-  <img src="../assets/icons/thin-arrow.png" alt="back image" class="h-6 w-6 ml-6 mt-3">
-</NuxtLink>
-<NuxtLink to="/login">
-  <span class="mr-2 p-4 text-green-600 underline text-2xl hover:text-black">Login</span>
+    <div class="flex justify-end">
+
+<NuxtLink to="/register">
+  <span class="mr-2 p-4 text-green-600 underline text-2xl hover:text-black">Register</span>
 </NuxtLink>
     </div>
 
@@ -36,7 +34,7 @@
     <input type="text" placeholder="*******" class="text-center  p-1 rounded-3xl focus:outline-none focus:ring-2 focus:ring-green-300 hover:bg-slate-100">
     </div>
 
-    <UButton color="red"  class="w-40 rounded-full flex justify-center" variant="solid">Register</UButton>
+    <UButton loading color="red" class="w-40 rounded-full flex justify-center"  variant="solid">Login</UButton>
     
    </div>
   </div>
