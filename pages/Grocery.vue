@@ -1,24 +1,34 @@
+<script setup lang="ts">
+const links = [
+  [{
+    label: 'Profile',
+    avatar: {
+      src: 'https://avatars.githubusercontent.com/u/155015410?v=4'
+    },
+    badge: 100
+  }, {
+    label: 'Your repositories',
+    icon: 'i-heroicons-home',
+    to: '/getting-started/installation'
+  }, {
+    label: 'Your commits',
+    icon: 'i-heroicons-chart-bar',
+    to: '/components/vertical-navigation'
+  }, {
+    label: 'Your orgarnizations',
+    icon: 'i-heroicons-command-line',
+    to: '/components/command-palette'
+  }], [{
+    label: 'Your stars',
+    icon: 'i-heroicons-light-bulb'
+  }, {
+    label: 'Your pull requests',
+    icon: 'i-heroicons-question-mark-circle'
+  }]
+]
+</script>
+
 <template>
-  <Menu>
-    <MenuButton>More</MenuButton>
-    <MenuItems>
-      <MenuItem v-slot="{ active }">
-        <a :class='{ "bg-blue-500": active }' href="/account-settings">
-          Account settings
-        </a>
-      </MenuItem>
-      <MenuItem v-slot="{ active }">
-        <a :class='{ "bg-blue-500": active }' href="/account-settings">
-          Documentation
-        </a>
-      </MenuItem>
-      <MenuItem disabled>
-        <span class="opacity-75">Invite a friend (coming soon!)</span>
-      </MenuItem>
-    </MenuItems>
-  </Menu>
+  <UVerticalNavigation :links="links" />
 </template>
 
-<script setup>
-  import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
-</script>
